@@ -95,6 +95,7 @@
             <h2>THÊM NHÂN VIÊN</h2>
             <div class="card">
                 <form method="post" class="form-card">
+                    <input type="hidden" id="id" name="id" value="${id}">
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Mã nhân viên<span
                                 class="text-danger"> *</span></label>
@@ -107,7 +108,7 @@
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Địa chỉ
                             <span class="text-danger"> *</span></label> <input type="text" name="employeeAddress"
-                                                                               placeholder="Địa chỉ..."><
+                                                                               placeholder="Địa chỉ...">
                             </div>
                         </div>
                         <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Lương
@@ -115,19 +116,9 @@
                                                                                placeholder="Lương...">
                         </div>
                     </div>
-
-                    <div class="row justify-content-between text-left">
-                        <div class="form-group col-12 flex-column d-flex"><label class="form-control-label px-3">Địa chỉ
-                            <span class="text-danger"> *</span></label> <input type="text"
-                                                                               id="address"
-                                                                               name="address"
-                                                                               placeholder="Địa chỉ..."
-                                                                               onblur="validate(6)">
-                        </div>
-                    </div>
             <div class="row justify-content-between text-left">
                 <div class="form-group col-12 flex-column d-flex"><label class="form-control-label px-3">
-                    <select class="form-select" id="status">
+                    <select class="form-select" id="status" name="department_id">
                         <c:forEach items="${departments}" var="department">
                             <option value="${department.id}" >${department.departmentName}</option>
                         </c:forEach>

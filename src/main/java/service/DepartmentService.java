@@ -9,4 +9,6 @@ public interface DepartmentService {
 
     List<Department> findAll();
 
+    Department findById(Long id);
+
 }

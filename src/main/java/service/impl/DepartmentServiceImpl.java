@@ -42,4 +42,31 @@ public class DepartmentServiceImpl implements DepartmentService {
         }
         return null;
     }
+
+    @Override
+    public Department findById(Long id) {
+        connection = ConnectionDatabase.getConnection();
+        if (connection != null)
+        {
+            try
+            {
+                String sql = "select * from department where id = ?";
+                PreparedStatement p = connection.prepareStatement(sql);
+                p.setLong(1, id);
+                ResultSet rs = p.executeQuery();
+                if (rs.next())
+                {
+                    String departmentName = rs.getString("departmentName");
+                    Department department = new Department(id, departmentName);
+                    return department;
+                }
+
+            }
+            catch (SQLException e)
+            {
+                System.out.println("Query Error");
+            }
+        }
+        return null;
+    }
 }

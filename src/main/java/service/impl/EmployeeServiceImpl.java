@@ -85,17 +85,14 @@ public class EmployeeServiceImpl implements EmployeeService
                 ResultSet rs = p.executeQuery();
                 if (rs.next())
                 {
-                    Long employee_id = rs.getLong("employee.id");
                     String employeeCode = rs.getString("employeeCode");
                     String employeeName = rs.getString("employeeName");
                     String employeeAddress = rs.getString("employeeAddress");
                     double employeeSalary = rs.getDouble("employeeSalary");
-
                     Long department_id = rs.getLong("department.id");
                     String departmentName = rs.getString("departmentName");
-
                     Department department = new Department(department_id, departmentName);
-                    Employee employee = new Employee(employee_id, employeeCode, employeeName, employeeAddress, employeeSalary, department);
+                    Employee employee = new Employee(id, employeeCode, employeeName, employeeAddress, employeeSalary, department);
 
                     return employee;
                 }
@@ -120,7 +117,7 @@ public class EmployeeServiceImpl implements EmployeeService
                 StringBuilder s = new StringBuilder();
                 s.append("insert into employee(employeeCode,employeeName,employeeAddress,employeeSalary,department_id)");
                 s.append(" ");
-                s.append("values(?,?,?,?,?");
+                s.append("values(?,?,?,?,?)");
                 PreparedStatement p = connection.prepareStatement(s.toString());
                 p.setString(1,e.getEmployeeCode());
                 p.setString(2, e.getEmployeeName());

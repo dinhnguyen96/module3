@@ -94,31 +94,32 @@
     <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
       <h2>Cập nhật nhân viên</h2>
       <div class="card">
-        <form method="post" class="form-card">
-          <input type="hidden" id="id" name="id">
+        <c:url var="update" value="/employees?action=edit"/>
+        <form method="post" class="form-card" action="${update}">
+          <input type="hidden" id="id" name="id" value="${id}">
           <div class="row justify-content-between text-left">
             <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Mã nhân viên<span
                     class="text-danger"> *</span></label>
-              <input type="text" id="code" name="employeeCode" placeholder="Mã nhân viên..." >
+              <input type="text" id="code" name="employeeCode" value="${employeeCode}" placeholder="Mã nhân viên" >
             </div>
             <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Tên nhân viên
               <span class="text-danger"> *</span></label> <input type="text"  name="employeeName"
-                                                                 placeholder="Tên nhân viên..."></div>
+                                                            value="${employeeName}" placeholder="Tên nhân viên"></div>
           </div>
           <div class="row justify-content-between text-left">
             <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Địa chỉ
               <span class="text-danger"> *</span></label> <input type="text" name="employeeAddress"
-                                                                 placeholder="Địa chỉ..."><
+                                                                value="${employeeAddress}" placeholder="Địa chỉ">
             </div>
           </div>
           <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Lương
             <span class="text-danger"> *</span></label> <input type="number"  name="employeeSalary"
-                                                               placeholder="Lương...">
+                                                              value="${employeeSalary}" placeholder="Lương">
           </div>
 
       <div class="row justify-content-between text-left">
         <div class="form-group col-12 flex-column d-flex"><label class="form-control-label px-3">
-          <select class="form-select" id="status">
+          <select class="form-select" id="status" name="department_id">
             <c:forEach items="${departments}" var="department">
               <c:choose>
                 <c:when test="${department.id == employeeDepartment.id}">

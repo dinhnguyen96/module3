@@ -1,5 +1,6 @@
 package controller;
 
+import model.Department;
 import model.Employee;
 import service.DepartmentService;
 import service.EmployeeService;
@@ -67,18 +68,36 @@ public class EmployeeServlet extends HttpServlet
         switch (action)
         {
             case "add":
-                req.setAttribute("departments", departmentService.findAll());
-                req.getRequestDispatcher("addemployee.jsp").forward(req,resp);
+                addEmployee(req,resp);
+                resp.sendRedirect("/employees");
+                break;
+            case "edit":
+                editEmployee(req,resp);
+                resp.sendRedirect("/employees");
                 break;
         }
 
     }
     public void addEmployee(HttpServletRequest request, HttpServletResponse response)
     {
-        String action = request.getParameter("action");
-        if (action == null)
-        {
-            action = "";
-        }
+        String employeeCode = request.getParameter("employeeCode");
+        String employeeName = request.getParameter("employeeName");
+        String employeeAddress = request.getParameter("employeeAddress");
+        double employeeSalary = Double.parseDouble(request.getParameter("employeeSalary"));
+        Department department = departmentService.findById(Long.parseLong(request.getParameter("department_id")));
+        Employee employee = new Employee(employeeCode, employeeName, employeeAddress, employeeSalary, department);
+        employeeService.addEmployee(employee);
+    }
+    public void editEmployee(HttpServletRequest req, HttpServletResponse res) {
+        Long id = Long.parseLong(req.getParameter("id"));
+        Employee employee = employeeService.findById(id);
+        employee.setEmployeeCode(req.getParameter("employeeCode"));
+        employee.setEmployeeName(req.getParameter("employeeName"));
+        employee.setEmployeeAddress(req.getParameter("employeeAddress"));
+        employee.setEmployeeSalary(Double.parseDouble(req.getParameter("employeeSalary")));
+        Department department = departmentService.findById(Long.parseLong(req.getParameter("department_id")));
+        employee.setEmployeeDepartment(department);
+        employeeService.updateEmployee(employee);
+
     }
 }
