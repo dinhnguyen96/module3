@@ -75,8 +75,12 @@ public class EmployeeServlet extends HttpServlet
                 editEmployee(req,resp);
                 resp.sendRedirect("/employees");
                 break;
+            case "search":
+                String name = req.getParameter("employeeName");
+                req.setAttribute("employees",employeeService.searchEmployeeByName(name));
+                req.getRequestDispatcher("employees.jsp").forward(req,resp);
+                break;
         }
-
     }
     public void addEmployee(HttpServletRequest request, HttpServletResponse response)
     {
@@ -100,4 +104,5 @@ public class EmployeeServlet extends HttpServlet
         employeeService.updateEmployee(employee);
 
     }
+
 }

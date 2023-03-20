@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f5bd4a0-78e8-4d2b-b869-c1f7c8b12490" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/filter/EncodingFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case-nhom-3/src/main/java/com/example/casenhom3/service/order/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case-nhom-3/src/main/java/com/example/casenhom3/service/order/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/EmployeeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/DepartmentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addemployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addemployee.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editemployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editemployee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/employees.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/employees.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679275404765</updated>
       <workItem from="1679275406237" duration="10813000" />
-      <workItem from="1679286768298" duration="6087000" />
+      <workItem from="1679286768298" duration="9169000" />
     </task>
     <servers />
   </component>

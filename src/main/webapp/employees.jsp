@@ -233,11 +233,11 @@
                 <div class="row">
                     <div class="col-sm-8"><h2>EMPLOYEES <b>LIST</b></h2></div>
                 </div>
-                <form action="/employees?action=search" method="post">
+                <form id="myForm" action="/employees?action=search" method="post">
                     <div class="col-sm-4 float-right">
                         <div class="search-box">
-                            <i class="material-icons">&#xE8B6;</i>
-                            <input name="name" type="text" class="form-control" placeholder="Search&hellip;">
+                            <a href="javascript:{}" onclick="document.forms['myForm'].submit()"><i class="material-icons">&#xE8B6; </i></a>
+                            <input name="employeeName" type="text" class="form-control" placeholder="Search&hellip;">
                         </div>
                     </div>
                 </form>

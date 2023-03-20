@@ -200,11 +200,13 @@ public class EmployeeServiceImpl implements EmployeeService
             try
             {
                 StringBuilder s = new StringBuilder();
-                s.append("Select * from employee");
+                s.append("Select * from employee join department");
                 s.append(" ");
-                s.append("where employeeName like '%?'");
+                s.append("on employee.department_id = department.id");
+                s.append(" ");
+                s.append("where employee.employeeName like ? ");
                 PreparedStatement p = connection.prepareStatement(s.toString());
-                p.setString(1, name);
+                p.setString(1, "%"+name);
                 ResultSet rs = p.executeQuery();
                 List<Employee> employees = new ArrayList<>();
                 while (rs.next())
