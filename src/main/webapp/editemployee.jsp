@@ -95,15 +95,15 @@
       <h2>Cập nhật nhân viên</h2>
       <div class="card">
         <form method="post" class="form-card">
-          <input type="hidden" id="id" name="id"">
+          <input type="hidden" id="id" name="id">
           <div class="row justify-content-between text-left">
             <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Mã nhân viên<span
                     class="text-danger"> *</span></label>
-              <input type="text" id="code" name="employeeCode" placeholder="Mã nhân viên..." ">
+              <input type="text" id="code" name="employeeCode" placeholder="Mã nhân viên..." >
             </div>
             <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Tên nhân viên
               <span class="text-danger"> *</span></label> <input type="text"  name="employeeName"
-                                                                 placeholder="Tên nhân viên...""></div>
+                                                                 placeholder="Tên nhân viên..."></div>
           </div>
           <div class="row justify-content-between text-left">
             <div class="form-group col-sm-6 flex-column d-flex"><label class="form-control-label px-3">Địa chỉ
@@ -115,17 +115,7 @@
             <span class="text-danger"> *</span></label> <input type="number"  name="employeeSalary"
                                                                placeholder="Lương...">
           </div>
-      </div>
 
-      <div class="row justify-content-between text-left">
-        <div class="form-group col-12 flex-column d-flex"><label class="form-control-label px-3">Địa chỉ
-          <span class="text-danger"> *</span></label> <input type="text"
-                                                             id="address"
-                                                             name="address"
-                                                             placeholder="Địa chỉ..."
-                                                             onblur="validate(6)">
-        </div>
-      </div>
       <div class="row justify-content-between text-left">
         <div class="form-group col-12 flex-column d-flex"><label class="form-control-label px-3">
           <select class="form-select" id="status">
@@ -138,11 +128,8 @@
                   <option value="${department.id}" >${department.departmentName}</option>
                 </c:otherwise>
               </c:choose>
-
             </c:forEach>
           </select>
-        </div>
-      </div>
       <div class="row justify-content-end">
         <div class="form-group col-sm-6">
           <input class="btn-block btn-primary" type="submit" value="LƯU">
@@ -152,7 +139,6 @@
              class="btn-block btn-primary" href="/employees">QUAY LẠI</a>
         </div>
       </div>
-
       </form>
     </div>
   </div>

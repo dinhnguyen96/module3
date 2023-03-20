@@ -45,6 +45,7 @@ public class EmployeeServlet extends HttpServlet
                 req.setAttribute("departments", departmentService.findAll());
                 req.setAttribute("employeeSalary", employee.getEmployeeSalary());
                 req.getRequestDispatcher("editemployee.jsp").forward(req,resp);
+                break;
             case "delete":
                 Long employeeId = Long.parseLong(req.getParameter("id"));
                 employeeService.removeEmployee(employeeId);

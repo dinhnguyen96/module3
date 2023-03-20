@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@localhost">
+<dataSource name="employeemanage@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.45">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
@@ -1060,10 +1060,10 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="288" parent="1" name="ecommerce">
-      <Current>1</Current>
       <CollationName>utf8mb3_unicode_ci</CollationName>
     </schema>
     <schema id="289" parent="1" name="employeemanage">
+      <Current>1</Current>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="information_schema">
